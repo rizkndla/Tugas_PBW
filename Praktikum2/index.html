@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
+    <title>Form Pendaftaran</title>
 </head>
-
 <body>
-    <h2> Form Pendaftaran</h2>
-    <p>
-        Nama: <input type="text" name="username"></p>
-    <p>
-        Email: <input type="text" name="email">
-    </p>
-    <p>
-        Jenis Kelamin: <label></label><input type="radio" name="gender" value="male">Laki-laki</label>
-        <input type="radio" name="gender" value="female">Perempuan</label>
-    </p>
-    <p>
-        Hobi: <label><input type="checkbox" name="hobi" value="musik">Musik</label> <label><input type="checkbox"
-                name="hobi" value="membaca">Membaca</label>
-
-    </p>
-
-    <p>
-        Pilih Kota:<select name="pilihan">
-            <option value="1">Jakarta</option>
-            <option value="2">Karawang</option>
-        </select>
-    </p>
-
-    <p> Upload Foto: <button type="file" id="file" name="file">Choose File</button> No file chosen
-    </p>
-
-    <button type="button">Daftar</button>
-
+    <h2>Form Pendaftaran</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Nama:</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male"> Laki-laki</label>
+                    <label><input type="radio" name="gender" value="female"> Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Hobi:</td>
+                <td>
+                    <label><input type="checkbox" name="hobi[]" value="musik"> Musik</label>
+                    <label><input type="checkbox" name="hobi[]" value="olahraga"> Olahraga</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Pilih Kota:</td>
+                <td>
+                    <select name="kota">
+                        <option value="jakarta">Jakarta</option>
+                        <option value="karawang">Karawang</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload Foto:</td>
+                <td><input type="file" name="file"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Daftar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
-
 </html>
